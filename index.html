@@ -24,7 +24,7 @@
 'use strict';
 // Replace with the deployed Google Apps Script web-app /exec URL.
 // An Apps Script doPost endpoint is required to store answers in Google Sheets.
-const ENV = 'PROD' // PROD || DEV
+const ENV = 'DEV' // PROD || DEV
 // PROD: phones only. Mobile UA (or UA-CH mobile) + touch + phone-sized screen, so tablets/iPads/desktops are refused.
 // Desktop devtools device emulation can still spoof this; it is a gate, not a guarantee.
 const isPhone=()=>(navigator.userAgentData?.mobile??/Android.+Mobile|iPhone|iPod|Windows Phone|Mobi/i.test(navigator.userAgent))&&navigator.maxTouchPoints>0&&Math.min(screen.width,screen.height)<600;
